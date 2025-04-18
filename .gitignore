@@ -27,5 +27,7 @@ yarn-error.log*
 next-env.d.ts
 .qodo
 
-models/
-uploads/
+uploads*/
+Extracted*/
+frames*/
+models*/
