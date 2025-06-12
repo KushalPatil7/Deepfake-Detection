@@ -13,9 +13,9 @@ from werkzeug.utils import secure_filename
 # Configuration
 app = Flask(__name__)
 CORS(app, origins=["http://127.0.0.1:3000", "http://localhost:3000"])
-app.config['UPLOAD_FOLDER'] = r'C:\Users\kusha\Downloads\deepfake-detection\uploads'
-app.config['EXTRACTED_FRAMES'] = r'C:\Users\kusha\Downloads\deepfake-detection\Extracted Frames'
-MODEL_PATH = r'C:\Users\kusha\Downloads\deepfake-detection\models\VGG.h5'  # Path to your trained .h5 model# Path to your trained .h5 model
+app.config['UPLOAD_FOLDER'] = r'uploads'
+app.config['EXTRACTED_FRAMES'] = r'Extracted Frames'
+MODEL_PATH = r'models\ensemble.h5'  # Path to your trained .h5 model# Path to your trained .h5 model
 ALLOWED_EXTENSIONS = {'mp4', 'avi', 'mov', 'mkv'}
 INPUT_SIZE = (128, 128)
 
@@ -70,7 +70,7 @@ def predict_video(video_path):
     print(f"Prediction shape: {predictions.shape}")
     print(f"Mean prediction: {mean_prediction}")
     
-    # INVERTED LOGIC: Low values (< 0.5) are fake, high values (> 0.5) are real
+    # INVERTED LOGIC: Low values (< 0.5) are fake, high values (> 0.5) arreal
     # This is opposite of the standard interpretation but seems to match your expected results
     is_fake = bool(mean_prediction < 0.5)
     result = "fake" if is_fake else "real"

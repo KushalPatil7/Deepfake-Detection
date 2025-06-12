@@ -9,10 +9,10 @@ interface TeamMember {
 }
 
 const teamMembers: TeamMember[] = [
-  { name: "Alex Johnson", role: "Lead Developer", avatar: "AJ" },
-  { name: "Samantha Lee", role: "AI Researcher", avatar: "SL" },
-  { name: "David Chen", role: "UI/UX Designer", avatar: "DC" },
-  { name: "Maria Rodriguez", role: "Data Scientist", avatar: "MR" },
+  { name: "Kushal Patil", role: "Lead Developer", avatar: "KP" },
+  { name: "Aditya Bhosale", role: "Data Scientist", avatar: "AB" },
+  { name: "Pritam Fulari", role: "Full Stack Developer", avatar: "PF" },
+  { name: "Atharva Khairnar", role: "AI Researcher", avatar: "AK" },
 ]
 
 export default function About() {
@@ -68,7 +68,7 @@ export default function About() {
                   TensorFlow
                 </Badge>
                 <Badge variant="outline" className="bg-blue-900/30 text-blue-300 border-blue-700">
-                  PyTorch
+                 Flask
                 </Badge>
                 <Badge variant="outline" className="bg-green-900/30 text-green-300 border-green-700">
                   OpenCV
@@ -76,9 +76,9 @@ export default function About() {
                 <Badge variant="outline" className="bg-yellow-900/30 text-yellow-300 border-yellow-700">
                   Next.js
                 </Badge>
-                <Badge variant="outline" className="bg-red-900/30 text-red-300 border-red-700">
+                {/* <Badge variant="outline" className="bg-red-900/30 text-red-300 border-red-700">
                   ONNX Runtime
-                </Badge>
+                </Badge> */}
               </div>
             </CardContent>
           </Card>
@@ -116,11 +116,11 @@ export default function About() {
             <CardContent>
               <div className="flex items-center space-x-4 p-3">
                 <Avatar className="h-12 w-12">
-                  <AvatarFallback className="bg-gradient-to-br from-purple-500 to-blue-500 text-lg">DP</AvatarFallback>
+                  <AvatarFallback className="bg-gradient-to-br from-purple-500 to-blue-500 text-lg">SC</AvatarFallback>
                 </Avatar>
                 <div>
-                  <p className="font-medium text-lg">Dr. Patricia Morgan</p>
-                  <p className="text-gray-400">Professor of Computer Science & AI Ethics</p>
+                  <p className="font-medium text-lg">Dr. Santosh Chobe</p>
+                  <p className="text-gray-400">HOD of Information Technology</p>
                 </div>
               </div>
             </CardContent>
